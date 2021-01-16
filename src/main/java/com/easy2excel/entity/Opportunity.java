@@ -26,7 +26,7 @@ public class Opportunity extends Auditable {
     private String opportunity_name;
 
     @ManyToOne
-    @JoinColumn(name = "accounr_id",nullable = false,foreignKey = @ForeignKey(name = "account_fk"))
+    @JoinColumn(name = "account_id",foreignKey = @ForeignKey(name = "account_fk"))
     private Account account;
 
 }

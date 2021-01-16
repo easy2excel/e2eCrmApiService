@@ -27,7 +27,6 @@ public class AccountController extends BaseController<Account, AccountDTO, Accou
 
     @Override
     void setPropertiesOnInput(final AccountDTO input, final Account account) {
-        System.out.println("method call");
         account.setName(input.getName());
 
     }
