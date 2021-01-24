@@ -19,9 +19,9 @@ public class BaseViewDTO {
     private Date modifiedAt;
     private boolean active = true;
 
-    public BaseViewDTO(final Auditable auditable,boolean setTimeFields){
-        this.active=auditable.isActive();
-        if (setTimeFields){
+    public BaseViewDTO(final Auditable auditable, boolean setTimeFields) {
+        this.active = auditable.isActive();
+        if (setTimeFields) {
             this.createdBy = auditable.getCreatedBy();
             this.createdAt = auditable.getCreateAt();
             this.modifiedBy = auditable.getModifiedBy();

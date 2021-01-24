@@ -32,7 +32,7 @@ public class Account extends Auditable {
     @Column(name = "url", length = 60)
     private String url;
 
-    @OneToMany(mappedBy = "account",cascade = CascadeType.ALL,orphanRemoval = true,fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Opportunity> opportunities = new ArrayList<>();
 
 }

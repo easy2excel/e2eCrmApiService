@@ -10,7 +10,7 @@ import javax.validation.constraints.NotNull;
 @Setter
 @Getter
 @ToString
-public class OpportunityDTO extends BaseDTO{
+public class OpportunityDTO extends BaseDTO {
     @NotNull
     private Long id;
     @NotBlank

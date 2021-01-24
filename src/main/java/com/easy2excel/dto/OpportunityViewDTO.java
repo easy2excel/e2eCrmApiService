@@ -16,14 +16,15 @@ public class OpportunityViewDTO extends BaseViewDTO {
     public OpportunityViewDTO(Auditable auditable, final Long id, final String name, boolean setTimeFields) {
         super(auditable, setTimeFields);
         this.id = id;
-        this.name= name;
+        this.name = name;
     }
-    public static OpportunityViewDTO from(final Opportunity opportunity,final boolean setExtendedProperties){
+
+    public static OpportunityViewDTO from(final Opportunity opportunity, final boolean setExtendedProperties) {
         OpportunityViewDTO opportunityViewDTO;
-        if (opportunity ==null)
-            opportunityViewDTO= null;
-        else{
-            opportunityViewDTO = new OpportunityViewDTO(opportunity,opportunity.getId(),opportunity.getOpportunity_name(),setExtendedProperties);
+        if (opportunity == null)
+            opportunityViewDTO = null;
+        else {
+            opportunityViewDTO = new OpportunityViewDTO(opportunity, opportunity.getId(), opportunity.getOpportunity_name(), setExtendedProperties);
         }
         return opportunityViewDTO;
     }
