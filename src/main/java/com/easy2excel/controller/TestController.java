@@ -10,9 +10,12 @@ public class TestController {
     public String m1() {
         return "hii";
     }
-
     @PostMapping("/")
-    public String saveData(){
+    public String saveData() {
         return "save";
+    }
+    @GetMapping("/tets2")
+    public String m2() {
+        return "22222";
     }
 }
