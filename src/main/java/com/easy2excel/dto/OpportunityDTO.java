@@ -15,4 +15,6 @@ public class OpportunityDTO extends BaseDTO {
     private Long id;
     @NotBlank
     private String name;
+    @NotBlank
+    private String accountId;
 }

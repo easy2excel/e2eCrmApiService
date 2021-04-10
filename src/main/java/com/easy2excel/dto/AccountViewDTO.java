@@ -6,12 +6,23 @@ import lombok.Getter;
 import lombok.Setter;
 import lombok.ToString;
 
+import javax.validation.constraints.NotNull;
+
 @Getter
 @Setter
 @ToString
 public class AccountViewDTO extends BaseViewDTO {
     private Long id;
     private String name;
+    private String website;
+    private String tickerSymbol;
+    private String tradeCurrency;
+    private String companyType;
+    private String industryType;
+    private String baseCurrency;
+    private String rating;
+    private String revenue;
+    private String description;
 
     public AccountViewDTO(Auditable auditable, final Long id, final String name, boolean setTimeFields) {
         super(auditable, setTimeFields);

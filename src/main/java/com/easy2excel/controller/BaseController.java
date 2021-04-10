@@ -42,6 +42,7 @@ public abstract class BaseController<T, U extends BaseDTO, V extends BaseViewDTO
     @Transactional(readOnly = true)
     public ResponseEntity<List<V>> getAllEntities() {
         log.debug("Going to fetch all {}", baseEntityName);
+        //Iterable<T> s = baseRepository.findAll();
         final List<V> entities = transferListOnViewEntityDTO(baseRepository.findAll());
         return ResponseEntity.ok(entities);
     }

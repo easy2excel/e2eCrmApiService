@@ -29,8 +29,32 @@ public class Account extends Auditable {
     @Column(name = "name", length = 60, nullable = false)
     private String name;
 
-    @Column(name = "url", length = 60)
-    private String url;
+    @Column(name = "website", length = 60)
+    private String website;
+
+    @Column(name = "tickerSymbol", length = 60)
+    private String tickerSymbol;
+
+    @Column(name = "tradeCurrency", length = 60)
+    private String tradeCurrency;
+
+    @Column(name = "companyType", length = 60)
+    private String companyType;
+
+    @Column(name = "industryType", length = 60)
+    private String industryType;
+
+    @Column(name = "baseCurrency", length = 60)
+    private String baseCurrency;
+
+    @Column(name = "rating", length = 60)
+    private String rating;
+
+    @Column(name = "revenue", length = 60)
+    private String revenue;
+
+    @Column(name = "description", length = 60)
+    private String description;
 
     @OneToMany(mappedBy = "account", cascade = CascadeType.ALL, orphanRemoval = true, fetch = FetchType.LAZY)
     private List<Opportunity> opportunities = new ArrayList<>();

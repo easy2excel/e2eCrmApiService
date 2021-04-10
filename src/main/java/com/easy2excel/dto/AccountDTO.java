@@ -17,5 +17,15 @@ public class AccountDTO extends BaseDTO {
     private String name;
     @NotNull
     private Long Id;
-
+    private String website;
+    private String tickerSymbol;
+    @NotNull
+    private String tradeCurrency;
+    private String companyType;
+    private String industryType;
+    @NotNull
+    private String baseCurrency;
+    private String rating;
+    private String revenue;
+    private String description;
 }

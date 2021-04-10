@@ -28,6 +28,9 @@ public class AccountController extends BaseController<Account, AccountDTO, Accou
     @Override
     void setPropertiesOnInput(final AccountDTO input, final Account account) {
         account.setName(input.getName());
+        account.setBaseCurrency(input.getBaseCurrency());
+        account.setCompanyType(input.getCompanyType());
+        account.setDescription(input.getDescription());
 
     }
 
