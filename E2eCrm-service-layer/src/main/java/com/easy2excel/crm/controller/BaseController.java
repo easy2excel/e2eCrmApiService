@@ -6,6 +6,7 @@ import com.easy2excel.crm.dto.view.BaseViewDTO;
 import com.easy2excel.crm.utils.EntityUtils;
 import io.micrometer.core.annotation.Timed;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,10 +22,10 @@ import java.util.stream.StreamSupport;
 @Slf4j
 public abstract class BaseController<T, U extends BaseDTO, V extends BaseViewDTO> {
 
-    final CrudRepository<T, Long> baseRepository;
+    final JpaRepository<T, Long> baseRepository;
     final String baseEntityName;
 
-    public BaseController(final CrudRepository<T, Long> crudRepository, final String baseEntityName) {
+    public BaseController(final JpaRepository<T, Long> crudRepository, final String baseEntityName) {
         this.baseRepository = crudRepository;
         this.baseEntityName = baseEntityName;
     }
@@ -90,7 +91,7 @@ public abstract class BaseController<T, U extends BaseDTO, V extends BaseViewDTO
 
     ResponseEntity<V> saveEntity(final T entity) {
         final T save = baseRepository.save(entity);
-        final V viewDTO = setPropertiesOnViewEntityDTO(save, showExtendedPropertiesFroSave());
+        final V viewDTO = setPropertiesOnViewEntityDTO(save, showExtendedPropertiesForSave());
         return ResponseEntity.ok(viewDTO);
     }
 
@@ -100,7 +101,7 @@ public abstract class BaseController<T, U extends BaseDTO, V extends BaseViewDTO
 
     abstract V setPropertiesOnViewEntityDTO(T jpaEntity, boolean setExtendedProperties);
 
-    boolean showExtendedPropertiesFroSave() {
+    boolean showExtendedPropertiesForSave() {
         return false;
     }
 

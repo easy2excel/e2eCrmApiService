@@ -6,7 +6,7 @@ import org.springframework.data.domain.AuditorAware;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import java.util.Optional;
-//@Configuration
+@Configuration
 public class AuditingService implements AuditorAware<String> {
 
     @Bean

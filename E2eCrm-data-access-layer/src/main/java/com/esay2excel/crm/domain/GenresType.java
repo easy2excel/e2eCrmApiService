@@ -1,0 +1,33 @@
+package com.esay2excel.crm.domain;
+
+public enum GenresType {
+    ACTION,
+    ADULT,
+    ADVENTURE,
+    ANIMATION,
+    BIOGRAPHY,
+    COMEDY,
+    CRIME,
+    DOCUMENTARY,
+    DRAMA,
+    FAMILY,
+    FANTASY,
+    FILM_NOIR,
+    GAME_SHOW,
+    GENRES,
+    HISTORY,
+    HORROR,
+    MUSIC,
+    MUSICAL,
+    MYSTERY,
+    NEWS,
+    REALITY_TV,
+    ROMANCE,
+    SCI_FI,
+    SHORT,
+    SPORT,
+    TALK_SHOW,
+    THRILLER,
+    WAR,
+    WESTERN
+}
