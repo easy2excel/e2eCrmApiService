@@ -30,6 +30,6 @@ public class E2ecrmApplication implements CommandLineRunner{
 
 	@Override
 	public void run(String... args) throws Exception {
-		System.out.println("hiiiii111122222");
+		System.out.println("hiiiii");
 	}
 }

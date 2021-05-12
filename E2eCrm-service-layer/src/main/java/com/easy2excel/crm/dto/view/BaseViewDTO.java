@@ -29,5 +29,4 @@ public class BaseViewDTO {
             this.modifiedAt = auditable.getModifiedAt();
         }
     }
-
 }
