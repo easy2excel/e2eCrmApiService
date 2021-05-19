@@ -37,7 +37,7 @@ public abstract class Auditable {
     @Column(name = "modified_by", length = 256)
     private String modifiedBy;
 
-    @Column(name = "active",nullable = false)
+    @Column(name = "active", nullable = false)
     private boolean active = true;
 
 }

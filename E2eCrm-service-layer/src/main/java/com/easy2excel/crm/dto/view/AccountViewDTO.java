@@ -1,6 +1,5 @@
 package com.easy2excel.crm.dto.view;
 
-import com.esay2excel.crm.domain.Account;
 import com.esay2excel.crm.domain.Auditable;
 import lombok.Getter;
 import lombok.Setter;
@@ -29,7 +28,7 @@ public class AccountViewDTO extends BaseViewDTO {
         this.name = name;
     }
 
-    public static AccountViewDTO from(Account account, final boolean setExtendedProperties) {
+    /*public static AccountViewDTO from(Account account, final boolean setExtendedProperties) {
 
         AccountViewDTO accountViewDTO;
         if (account == null) {
@@ -38,5 +37,5 @@ public class AccountViewDTO extends BaseViewDTO {
             accountViewDTO = new AccountViewDTO(account, account.getId(), account.getName(), setExtendedProperties);
         }
         return accountViewDTO;
-    }
+    }*/
 }
